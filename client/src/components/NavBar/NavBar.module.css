@@ -1,10 +1,11 @@
 .navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 90%;
-  margin-top: 10px;
-  margin-bottom: 50px;
   margin-left: 5%;
   margin-right: 5%;
-  background: rgba(117, 102, 63, 0.3);
+  background: rgba(104, 0, 0, 0.3);
   padding-top: 10px;
   padding-bottom: 10px;
   background-image: url("C:\Users\Lucas\Documents\Programación\PI-Food-main\client\src\assets\images\NavBarBG.jpg");
@@ -13,11 +14,15 @@
   background-repeat: no-repeat;
   height: 120px;
 }
-
+.logo {
+  height: 80%;
+  margin-top: 10px;
+  margin-left: 25px;
+}
 .menuContainer {
   display: flex;
   justify-content: right;
-  margin-right: 300px;
+  margin-right: 250px;
   margin-top: 60px;
 }
 
