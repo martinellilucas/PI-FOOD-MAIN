@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  width: 90%;
+  margin: 3%;
+}
+.text {
+  color: white;
+  text-shadow: 3px 3px 8px darksalmon;
+}
+.link {
+  color: whitesmoke;
+  text-decoration: none;
+}
+.link:visited {
+  color: whitesmoke;
+}

@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-image: url("C:\Users\Lucas\Documents\Programación\PI-Food-main\client\src\assets\images\landingBG.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.textContainer {
+  background: rgba(117, 102, 63, 0.5);
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.title {
+  font-size: 5em;
+  text-align: center;
+  color: whitesmoke;
+  text-shadow: 3px 3px 8px darksalmon;
+}
+.text {
+  font-size: 3em;
+  text-align: center;
+  color: whitesmoke;
+  margin: 50px;
+  text-shadow: 3px 3px 8px darksalmon;
+}
+
+.button {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 150px;
+  text-decoration: none;
+}

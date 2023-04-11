@@ -1,0 +1,39 @@
+.navBar {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background: rgba(117, 102, 63, 0.3);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-image: url("C:\Users\Lucas\Documents\Programación\PI-Food-main\client\src\assets\images\NavBarBG.jpg");
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 120px;
+}
+
+.menuContainer {
+  display: flex;
+  justify-content: right;
+  margin-right: 300px;
+  margin-top: 60px;
+}
+
+.menuText {
+  font-size: 1.5em;
+  display: flex;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease-in-out;
+  text-shadow: 3px 3px 8px darksalmon;
+}
+.menuText:hover {
+  font-size: 1.45em;
+  transition-delay: 0.3s;
+}
+.menuText:visited {
+  color: white;
+}

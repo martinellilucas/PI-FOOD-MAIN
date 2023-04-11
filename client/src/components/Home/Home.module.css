@@ -1,0 +1,15 @@
+.container {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(117, 102, 63, 0.3);
+}
+.title {
+  font-size: 3.5em;
+  text-align: left;
+  margin-left: 100px;
+  color: whitesmoke;
+  text-shadow: 3px 3px 8px darksalmon;
+}

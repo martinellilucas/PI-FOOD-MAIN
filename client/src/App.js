@@ -1,9 +1,24 @@
-import './App.css';
-
+import { Routes, Route, useLocation } from "react-router-dom";
+import NavBar from "./components/NavBar/NavBar";
+import Landing from "./components/Landing/Landing";
+import About from "./components/About/About";
+import Form from "./components/Form/Form";
+import Home from "./components/Home/Home";
+import Footer from "./components/Footer/Footer";
 function App() {
+  const { pathname } = useLocation();
   return (
-    <div className="App">
-      <h1>Henry Food</h1>
+    <div>
+      {pathname !== "/" && <NavBar />}
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/detail" />
+        <Route path="/form" element={<Form />} />
+        <Route path="*" />
+      </Routes>
+      <Footer></Footer>
     </div>
   );
 }
