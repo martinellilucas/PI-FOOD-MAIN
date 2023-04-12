@@ -6,7 +6,7 @@ const Landing = () => {
   return (
     <div className={style.container}>
       <div className={style.textContainer}>
-        <h1 className={style.title}>Bienvenidos a comiditas</h1>
+        <h1 className={style.title}>Bienvenidos a Healthy Food</h1>
         <p className={style.text}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
           fugit velit, ullam quod consectetur ut modi amet ratione dignissimos

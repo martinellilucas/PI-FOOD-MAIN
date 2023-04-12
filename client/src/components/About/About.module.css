@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+  margin-top: 140px;
+  background-image: url("C:\Users\Lucas\Documents\Programación\PI-Food-main\client\src\assets\images\aboutBG.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+}
+
+.title {
+  margin-bottom: 50px;
+  font-size: 5em;
+  color: whitesmoke;
+  text-shadow: 3px 3px 8px darksalmon;
+  text-decoration: overline;
+}
+
+.text {
+  font-size: 3em;
+  text-align: center;
+  color: whitesmoke;
+  margin: 50px;
+  text-shadow: 3px 3px 8px darksalmon;
+}

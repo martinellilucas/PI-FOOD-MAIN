@@ -42,3 +42,9 @@
 .menuText:visited {
   color: white;
 }
+
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

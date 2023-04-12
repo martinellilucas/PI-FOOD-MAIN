@@ -21,6 +21,7 @@
   text-align: center;
   color: whitesmoke;
   text-shadow: 3px 3px 8px darksalmon;
+  text-decoration: overline;
 }
 .text {
   font-size: 3em;

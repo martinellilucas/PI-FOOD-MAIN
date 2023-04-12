@@ -11,6 +11,7 @@
   text-shadow: 3px 3px 8px darksalmon;
   background: rgba(245, 97, 97, 0.7);
   padding: 0.4em;
+  margin: 20px;
 }
 
 .button:hover {

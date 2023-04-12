@@ -3,9 +3,10 @@
   height: 480px;
   margin: 20px;
   background: rgba(245, 97, 97, 0.7);
-  border: 1px solid black;
+  border: 1px solid whitesmoke;
   border-radius: 15px;
   padding: 20px;
+  box-shadow: 3px 3px 8px darksalmon;
 }
 .title {
   font-size: 1.5em;

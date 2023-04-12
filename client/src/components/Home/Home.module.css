@@ -7,9 +7,10 @@
 }
 
 .title {
-  font-size: 3.5em;
+  font-size: 5em;
   text-align: left;
   margin-left: 150px;
   color: whitesmoke;
   text-shadow: 3px 3px 8px darksalmon;
+  text-decoration: overline;
 }
