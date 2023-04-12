@@ -1,0 +1,22 @@
+.card {
+  width: 480px;
+  height: 480px;
+  margin: 20px;
+  background: rgba(245, 97, 97, 0.7);
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 20px;
+}
+.title {
+  font-size: 1.5em;
+  text-align: center;
+  color: whitesmoke;
+  text-shadow: 3px 3px 8px darksalmon;
+}
+.description {
+  font-size: 1.2em;
+  text-align: center;
+  color: whitesmoke;
+  margin: 50px;
+  text-shadow: 3px 3px 8px darksalmon;
+}

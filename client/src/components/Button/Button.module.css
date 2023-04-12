@@ -1,18 +1,19 @@
 .button {
-  font-size: 1.25em;
+  font-size: 1.5em;
   color: whitesmoke;
   text-decoration: none;
   border-radius: 5px;
   height: max-content;
   width: max-content;
-  box-shadow: 3px 3px 10px coral;
+  box-shadow: 3px 3px 8px darksalmon;
   border: 0px;
   transition: 0.2s ease-in-out;
-  text-shadow: 1px 1px 3px coral;
-  background: rgba(117, 102, 63, 0.5);
+  text-shadow: 3px 3px 8px darksalmon;
+  background: rgba(245, 97, 97, 0.7);
+  padding: 0.4em;
 }
 
 .button:hover {
   transition-delay: 0.2s;
-  font-size: 1.2em;
+  padding: 0.5em;
 }

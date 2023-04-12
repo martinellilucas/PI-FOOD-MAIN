@@ -1,19 +1,20 @@
 .container {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  padding: 50px;
-  width: 90%;
-  margin: 3%;
+  width: 100%;
+  margin-top: 5px;
 }
 .text {
   color: white;
-  text-shadow: 3px 3px 8px darksalmon;
+  text-shadow: 3px 3px 8px black;
 }
 .link {
   color: whitesmoke;
   text-decoration: none;
+  text-shadow: 3px 3px 8px black;
 }
 .link:visited {
   color: whitesmoke;
+  text-shadow: 3px 3px 8px black;
 }

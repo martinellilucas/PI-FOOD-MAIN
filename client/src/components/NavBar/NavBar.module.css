@@ -1,11 +1,11 @@
 .navBar {
+  position: fixed;
+  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  background: rgba(104, 0, 0, 0.3);
+  width: 100%;
+  background: rgba(245, 97, 97, 0.7);
   padding-top: 10px;
   padding-bottom: 10px;
   background-image: url("C:\Users\Lucas\Documents\Programación\PI-Food-main\client\src\assets\images\NavBarBG.jpg");

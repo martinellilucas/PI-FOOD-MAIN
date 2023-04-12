@@ -1,15 +1,15 @@
-.container {
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background: rgba(104, 0, 0, 0.3);
+.home {
+  margin-top: 140px;
+  width: 100%;
+  background-image: url("C:\Users\Lucas\Documents\Programación\PI-Food-main\client\src\assets\images\fondoHome.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 .title {
   font-size: 3.5em;
   text-align: left;
-  margin-left: 100px;
+  margin-left: 150px;
   color: whitesmoke;
   text-shadow: 3px 3px 8px darksalmon;
 }

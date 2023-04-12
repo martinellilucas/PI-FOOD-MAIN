@@ -3,12 +3,10 @@ import Carrousel from "../Carrousel/Carrousel";
 import style from "./Home.module.css";
 const Home = () => {
   return (
-    <div>
+    <div className={style.home}>
       <Carrousel />
-      <div className={style.container}>
-        <h1 className={style.title}>Recetas</h1>
-        <Cards></Cards>
-      </div>
+      <h1 className={style.title}>Recetas</h1>
+      <Cards></Cards>
     </div>
   );
 };
