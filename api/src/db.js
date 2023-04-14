@@ -11,6 +11,14 @@ const sequelize = new Sequelize(
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
   }
 );
+
+try {
+  sequelize.authenticate();
+  console.log("Connection has been established successfully");
+} catch (error) {
+  console.error("Unable to connect to the database: ", error);
+}
+
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
@@ -37,7 +45,7 @@ sequelize.models = Object.fromEntries(capsEntries);
 
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
-const { Recipe, Diets } = sequelize.models;
+const { Recipe, Diet } = sequelize.models;
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
