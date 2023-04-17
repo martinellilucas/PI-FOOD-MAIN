@@ -16,7 +16,7 @@
   margin-left: 150px;
   font-size: 3.5em;
   color: whitesmoke;
-  text-shadow: 3px 3px 8px rgb(184, 106, 80);
+  text-shadow: 4px 4px 8px #db363b;
   text-decoration: overline;
 }
 .form {
@@ -37,13 +37,13 @@
   margin: 20px;
   border: 0px;
   border-radius: 3px;
-  box-shadow: 3px 3px 8px darksalmon;
+  box-shadow: 3px 3px 8px #db363b;
 }
 .label {
   font-size: 1.5em;
   color: whitesmoke;
   margin: 20px;
-  text-shadow: 3px 3px 8px darksalmon;
+  text-shadow: 3px 3px 8px #db363b;
 }
 .button {
   display: flex;

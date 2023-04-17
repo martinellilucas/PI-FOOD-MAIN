@@ -7,14 +7,14 @@
 }
 .text {
   color: white;
-  text-shadow: 3px 3px 8px black;
+  text-shadow: 3px 3px 8px white;
 }
 .link {
   color: whitesmoke;
   text-decoration: none;
-  text-shadow: 3px 3px 8px black;
+  text-shadow: 3px 3px 8px white;
 }
 .link:visited {
   color: whitesmoke;
-  text-shadow: 3px 3px 8px black;
+  text-shadow: 3px 3px 8px white;
 }

@@ -6,18 +6,18 @@
   border: 1px solid whitesmoke;
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 3px 3px 8px darksalmon;
+  box-shadow: 3px 3px 8px #db363b;
 }
 .title {
   font-size: 1.5em;
   text-align: center;
   color: whitesmoke;
-  text-shadow: 3px 3px 8px darksalmon;
+  text-shadow: 3px 3px 8px #db363b;
 }
 .description {
   font-size: 1.2em;
   text-align: center;
   color: whitesmoke;
   margin: 50px;
-  text-shadow: 3px 3px 8px darksalmon;
+  text-shadow: 3px 3px 8px #db363b;
 }
