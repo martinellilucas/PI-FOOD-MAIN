@@ -1,14 +1,26 @@
+const getRecipeById = require("../controllers/getRecipeById");
+const getRecipeByName = require("../controllers/getRecipeByName");
 const getRecipes = require("../controllers/getRecipes");
 const postRecipe = require("../controllers/postRecipe");
 
-const handlerIdRecipe = (req, res) => {
-  res.status(200).send("esta es una receta por id: " + req.params.id);
+const handlerIdRecipe = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const recipe = await getRecipeById(id);
+    res.status(200).json(recipe);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
 };
 
-const handlerNameRecipe = (req, res) => {
+const handlerNameRecipe = async (req, res) => {
   const { name } = req.query;
-  if (name) res.status(200).send("esta es una receta por name: " + name);
-  res.status(200).send("todas las recetas");
+  try {
+    if (name) res.status(200).json(await getRecipeByName(name));
+    res.status(200).json(await getRecipes());
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
 };
 
 const handlerPostRecipe = (req, res) => {

@@ -6,8 +6,8 @@ const { API_KEY, URL } = process.env;
 const getDiets = async () => {
   let diets = await Diet.findAll();
   if (!diets.length) {
-    return axios(
-      `${URL}?apiKey=${API_KEY}&number=100&addRecipeInformation=true`
+    axios(
+      `${URL}/complexSearch?apiKey=07bd6759d3e149aab857123260d6c9e2&number=100&addRecipeInformation=true`
     ).then(async ({ data }) => {
       const aux = data.results.flatMap((e) => e.diets); // ignora los elementos vacios
       const arr = new Set(aux); // eliminamos repetidos
@@ -16,7 +16,6 @@ const getDiets = async () => {
     });
   }
   diets = await Diet.findAll();
-
   return diets;
 };
 

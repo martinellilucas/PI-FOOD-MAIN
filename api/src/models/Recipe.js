@@ -24,7 +24,7 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNullL: false,
     },
-    steps: {
+    instructions: {
       type: DataTypes.STRING,
       allowNull: false,
     },
