@@ -5,16 +5,18 @@
   border-radius: 5px;
   height: max-content;
   width: max-content;
-  box-shadow: 3px 3px 8px darksalmon;
+  box-shadow: 3px 3px 8px #db363b;
   border: 0px;
   transition: 0.2s ease-in-out;
-  text-shadow: 3px 3px 8px darksalmon;
+  text-shadow: 3px 3px 8px white;
   background: rgba(245, 97, 97, 0.7);
   padding: 0.4em;
   margin: 20px;
+  border: 1px solid whitesmoke;
 }
 
 .button:hover {
   transition-delay: 0.2s;
   padding: 0.5em;
+  cursor: pointer;
 }

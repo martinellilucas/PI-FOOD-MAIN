@@ -1,17 +1,11 @@
 import Card from "../Card/Card";
 import style from "./Cards.module.css";
-const Cards = (props) => {
+const Cards = ({ recipes }) => {
   return (
     <div className={style.container}>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
+      {recipes.map(({ title, image, id }) => {
+        return <Card key={id} id={id} name={title} image={image} />;
+      })}
     </div>
   );
 };
