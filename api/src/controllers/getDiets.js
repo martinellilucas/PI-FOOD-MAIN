@@ -7,7 +7,7 @@ const getDiets = async () => {
   let diets = await Diet.findAll();
   if (!diets.length) {
     axios(
-      `${URL}/complexSearch?apiKey=07bd6759d3e149aab857123260d6c9e2&number=100&addRecipeInformation=true`
+      `${URL}/complexSearch?apiKey=b8e39871e419456fb99421c433550d65&number=100&addRecipeInformation=true`
     ).then(async ({ data }) => {
       const aux = data.results.flatMap((e) => e.diets); // ignora los elementos vacios
       const arr = new Set(aux); // eliminamos repetidos

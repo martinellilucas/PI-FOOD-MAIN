@@ -18,7 +18,7 @@ const reducer = (state = initialState, action) => {
           healthScore,
           instructions,
           image,
-          diets,
+          diets: [...diets, action.payload.vegetarian ? "vegetarian" : ""],
         },
       };
     case CLEAN_DETAIL:

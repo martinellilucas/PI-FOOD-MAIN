@@ -10,7 +10,6 @@ export const Detail = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    recipe.vegetarian && recipe.diets.push("vegetarian");
     dispatch(addRecipeDetail(id));
     return () => {
       dispatch(cleanDetail());
