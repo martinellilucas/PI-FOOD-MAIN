@@ -5,6 +5,7 @@ import About from "./components/About/About";
 import Form from "./components/Form/Form";
 import Home from "./components/Home/Home";
 import Footer from "./components/Footer/Footer";
+import { Detail } from "./components/Detail/Detail";
 function App() {
   const { pathname } = useLocation();
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/detail" />
+        <Route path="/detail/:id" element={<Detail />} />
         <Route path="/form" element={<Form />} />
         <Route path="*" />
       </Routes>

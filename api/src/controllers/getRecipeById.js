@@ -4,7 +4,7 @@ const { API_KEY, URL } = process.env;
 
 const getRecipeById = (id) => {
   return axios(
-    `${URL}/${id}/information?apiKey=07bd6759d3e149aab857123260d6c9e2`
+    `${URL}/${id}/information?apiKey=ce9cda978dc5474e9d55676a2ad64194`
   ).then((res) => {
     const recipe = res.data;
     return recipe;
