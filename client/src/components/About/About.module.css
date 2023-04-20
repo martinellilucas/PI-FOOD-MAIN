@@ -26,3 +26,15 @@
   margin: 50px;
   text-shadow: 3px 3px 8px #db363b;
 }
+@media screen and (max-width: 900px) {
+  .container {
+    margin-top: 40px;
+    padding-bottom: 450px;
+  }
+  .title {
+    font-size: 3em;
+  }
+  .text {
+    font-size: 1.5em;
+  }
+}

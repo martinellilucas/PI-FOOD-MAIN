@@ -15,7 +15,7 @@ const Home = () => {
   };
 
   const handleNext = () => {
-    if (currentPage < 99) setCurretPage(currentPage + 9);
+    if (currentPage < recipes.length) setCurretPage(currentPage + 9);
   };
   const handlePrevius = () => {
     if (currentPage > 0) setCurretPage(currentPage - 9);

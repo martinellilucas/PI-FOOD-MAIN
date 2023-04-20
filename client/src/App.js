@@ -6,6 +6,7 @@ import Form from "./components/Form/Form";
 import Home from "./components/Home/Home";
 import Footer from "./components/Footer/Footer";
 import { Detail } from "./components/Detail/Detail";
+import Error from "./components/Error/Error";
 function App() {
   const { pathname } = useLocation();
   return (
@@ -17,7 +18,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/form" element={<Form />} />
-        <Route path="*" />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer></Footer>
     </div>

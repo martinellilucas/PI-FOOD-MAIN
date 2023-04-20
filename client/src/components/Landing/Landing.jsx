@@ -6,23 +6,25 @@ const Landing = () => {
   return (
     <div className={style.container}>
       <div className={style.textContainer}>
-        <h1 className={style.title}>Bienvenidos a Healthy Food</h1>
+        <h1 className={style.title}>Welcome to Healthy Food</h1>
         <p className={style.text}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-          fugit velit, ullam quod consectetur ut modi amet ratione dignissimos
-          iusto veritatis. Et repellendus ipsam, quaerat ipsum facere quis at
-          minima. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
-          fugit natus magni maxime explicabo quae commodi aspernatur illum iure
-          quidem asperiores quibusdam harum, pariatur eius, error non
-          perspiciatis qui? Possimus. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Cupiditate temporibus error cum quibusdam laboriosam
-          minus soluta omnis natus eligendi ipsa corrupti recusandae ullam
-          autem, a, quo tempora dolores eos vel? Lorem ipsum, dolor sit amet
-          consectetur adipisicing elit. Reiciendis
+          This is a web application for healthy food recipes in which we can
+          search for recipes through requests to a server developed by me, which
+          in turn brings the information from{" "}
+          <Link className={style.link} to="https://spoonacular.com/food-api">
+            the spoonacular API
+          </Link>
+          . At the same time we can fill out a form with our own recipes that
+          will be saved in a database. You can also search for both API and
+          database recipes by name. After showing the recipes brought, we can
+          enter their detail by clicking on the cards shown on the home page.
+          This application was developed by Lucas Martinelli during Henry's
+          individual project instance. Click on the button below to enter the
+          page...
         </p>
       </div>
       <Link className={style.button} to="/home">
-        <Button text="Ingresar"></Button>
+        <Button text="Enter"></Button>
       </Link>
     </div>
   );

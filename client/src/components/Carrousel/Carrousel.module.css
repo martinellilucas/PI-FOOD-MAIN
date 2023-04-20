@@ -17,3 +17,8 @@
   opacity: 1;
   filter: contrast(120%);
 }
+@media screen and (max-width: 900px) {
+  .carrousel {
+    display: none;
+  }
+}

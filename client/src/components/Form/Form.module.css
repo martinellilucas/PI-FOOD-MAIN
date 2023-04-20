@@ -50,3 +50,16 @@
   align-items: center;
   text-decoration: none;
 }
+@media screen and (max-width: 900px) {
+  .container {
+    margin-top: 40px;
+    padding-bottom: 130px;
+  }
+  .title {
+    font-size: 3em;
+    margin: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}

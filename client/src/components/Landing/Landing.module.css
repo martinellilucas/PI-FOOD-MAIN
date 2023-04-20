@@ -33,9 +33,12 @@
 
 .button {
   display: flex;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
   margin-top: 20px;
-  margin-right: 150px;
+  text-decoration: none;
+}
+.link:visited {
+  color: white;
   text-decoration: none;
 }

@@ -18,3 +18,9 @@
   color: whitesmoke;
   text-shadow: 3px 3px 8px white;
 }
+
+@media screen and (max-width: 900px) {
+  .text {
+    font-size: 0.5em;
+  }
+}
