@@ -10,7 +10,7 @@ const Home = () => {
   const dispatch = useDispatch();
   const recipes = useSelector((state) => state.recipes);
 
-  const paginacion = () => {
+  const pagination = () => {
     return recipes.slice(currentPage, currentPage + 9);
   };
 
@@ -35,7 +35,7 @@ const Home = () => {
         <Button text="Next" onClick={handleNext} />
       </div>
       {recipes.length ? (
-        <Cards recipes={paginacion()}></Cards>
+        <Cards recipes={pagination()}></Cards>
       ) : (
         <h1 className={style.loading}>Loading...</h1>
       )}

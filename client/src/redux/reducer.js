@@ -1,11 +1,25 @@
-import { ADD_RECIPE_DETAIL, CLEAN_DETAIL, GET_RECIPES } from "./actions";
+import {
+  ADD_RECIPE_DETAIL,
+  CLEAN_DETAIL,
+  GET_RECIPES,
+  SEARCH_RECIPE,
+} from "./actions";
 
-const initialState = { recipes: [], recipeDetail: {} };
+const initialState = { recipes: [], recipeDetail: {}, allRecipes: [] };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_RECIPES:
-      return { ...state, recipes: action.payload };
+      return {
+        ...state,
+        recipes: [...action.payload],
+      };
+    case SEARCH_RECIPE:
+      return {
+        ...state,
+        allRecipes: [...state.recipes],
+        recipes: [...action.payload],
+      };
     case ADD_RECIPE_DETAIL:
       const { id, title, summary, healthScore, instructions, image, diets } =
         action.payload;

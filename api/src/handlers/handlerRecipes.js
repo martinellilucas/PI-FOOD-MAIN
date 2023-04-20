@@ -13,30 +13,25 @@ const handlerIdRecipe = async (req, res) => {
   }
 };
 
-const handlerNameRecipe = async (req, res) => {
-  const { name } = req.query;
-  try {
-    if (name) res.status(200).json(await getRecipeByName(name));
-    res.status(200).json(await getRecipes());
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-};
-
 const handlerPostRecipe = (req, res) => {
   try {
-    const { name, image, summary, score, steps } = req.body;
-    postRecipe({ name, image, summary, score, steps });
-    res.status(200).json({ exito: { name, image, summary, score, steps } });
+    const { title, image, summary, score, instructions } = req.body;
+    postRecipe({ title, image, summary, score, instructions });
+    res
+      .status(200)
+      .json({ exito: { title, image, summary, score, instructions } });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
 };
 
 const handlerGetRecipes = async (req, res) => {
+  const { name } = req.query;
+  let recipes;
   try {
-    const recipesApi = await getRecipes();
-    res.status(200).json(recipesApi);
+    if (name) recipes = await getRecipeByName(name);
+    else recipes = await getRecipes();
+    res.status(200).json(recipes);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -44,7 +39,6 @@ const handlerGetRecipes = async (req, res) => {
 
 module.exports = {
   handlerIdRecipe,
-  handlerNameRecipe,
   handlerPostRecipe,
   handlerGetRecipes,
 };

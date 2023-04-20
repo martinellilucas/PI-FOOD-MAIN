@@ -1,8 +1,8 @@
 const axios = require("axios");
 const { Recipe } = require("../db");
 
-const postRecipe = async ({ name, image, summary, score, steps }) => {
-  await Recipe.create({ name, image, summary, score, steps });
+const postRecipe = async ({ title, image, summary, score, instructions }) => {
+  await Recipe.create({ title, image, summary, score, instructions });
 };
 
 module.exports = postRecipe;

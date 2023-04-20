@@ -22,6 +22,7 @@ export const Detail = () => {
       {recipe.title ? (
         <div className={style.container}>
           <h1 className={style.title}>{recipe.title}</h1>
+          <hr className={style.separator}></hr>
 
           <h2 className={style.subTitle}>Summary</h2>
           <hr className={style.separator}></hr>
