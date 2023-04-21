@@ -2,27 +2,30 @@ import { useDispatch, useSelector } from "react-redux";
 import Cards from "../Cards/Cards";
 import Carrousel from "../Carrousel/Carrousel";
 import style from "./Home.module.css";
-import { getRecipes } from "../../redux/actions";
+import { getDiets, getRecipes } from "../../redux/actions";
 import { useEffect, useState } from "react";
 import Button from "../Button/Button";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const recipes = useSelector((state) => state.recipes);
+  const { recipes, diets } = useSelector((state) => state);
 
   const pagination = () => {
-    return recipes.slice(currentPage, currentPage + 9);
+    return recipes.slice(firstRecipeInPage, firstRecipeInPage + 9);
   };
 
   const handleNext = () => {
-    if (currentPage < recipes.length) setCurretPage(currentPage + 9);
+    if (firstRecipeInPage < recipes.length)
+      setCurretPage(firstRecipeInPage + 9);
   };
   const handlePrevius = () => {
-    if (currentPage > 0) setCurretPage(currentPage - 9);
+    if (firstRecipeInPage > 0) setCurretPage(firstRecipeInPage - 9);
   };
 
-  const [currentPage, setCurretPage] = useState(0);
+  const [firstRecipeInPage, setCurretPage] = useState(0);
   useEffect(() => {
+    dispatch(getDiets());
+    console.log(diets);
     dispatch(getRecipes());
   }, []);
 

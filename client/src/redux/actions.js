@@ -4,7 +4,17 @@ export const GET_RECIPES = "GET_RECIPES";
 export const ADD_RECIPE_DETAIL = "ADD_RECIPE_DETAIL";
 export const CLEAN_DETAIL = "CLEAN_DETAIL";
 export const SEARCH_RECIPE = "SEARCH_RECIPE";
+export const GET_DIETS = "GET_DIETS";
 const URL_RECIPES = "http://localhost:3001/recipes";
+const URL_DIETS = "http://localhost:3001/diets";
+
+export const getDiets = () => {
+  return async function (dispatch) {
+    const response = await axios.get(URL_DIETS);
+    dispatch({ type: GET_DIETS, payload: response.data });
+  };
+};
+
 export const getRecipes = () => {
   return async function (dispatch) {
     const response = await axios.get(`${URL_RECIPES}`);

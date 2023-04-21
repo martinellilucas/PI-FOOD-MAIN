@@ -15,11 +15,11 @@ const handlerIdRecipe = async (req, res) => {
 
 const handlerPostRecipe = (req, res) => {
   try {
-    const { title, image, summary, score, instructions } = req.body;
-    postRecipe({ title, image, summary, score, instructions });
+    const { title, image, summary, score, instructions, diets } = req.body;
+    postRecipe({ title, image, summary, score, instructions, diets });
     res
       .status(200)
-      .json({ exito: { title, image, summary, score, instructions } });
+      .json({ exito: { title, image, summary, score, instructions, diets } });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

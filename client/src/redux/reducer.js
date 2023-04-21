@@ -1,11 +1,17 @@
 import {
   ADD_RECIPE_DETAIL,
   CLEAN_DETAIL,
+  GET_DIETS,
   GET_RECIPES,
   SEARCH_RECIPE,
 } from "./actions";
 
-const initialState = { recipes: [], recipeDetail: {}, allRecipes: [] };
+const initialState = {
+  diets: [],
+  recipes: [],
+  recipeDetail: {},
+  allRecipes: [],
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -13,6 +19,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         recipes: [...action.payload],
+      };
+    case GET_DIETS:
+      return {
+        ...state,
+        diets: [...action.payload],
       };
     case SEARCH_RECIPE:
       return {
@@ -23,6 +34,7 @@ const reducer = (state = initialState, action) => {
     case ADD_RECIPE_DETAIL:
       const { id, title, summary, healthScore, instructions, image, diets } =
         action.payload;
+
       return {
         ...state,
         recipeDetail: {
@@ -35,6 +47,7 @@ const reducer = (state = initialState, action) => {
           diets: [...diets, action.payload.vegetarian ? "vegetarian" : ""],
         },
       };
+
     case CLEAN_DETAIL:
       return { ...state, recipeDetail: {} };
     default:

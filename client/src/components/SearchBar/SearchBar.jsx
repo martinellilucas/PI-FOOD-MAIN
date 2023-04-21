@@ -22,6 +22,7 @@ const SearchBar = () => {
         onChange={handleChange}
         onKeyPress={handleKeyPressed}
         className={style.input}
+        value={search}
         type="search"
         placeholder="Search"
       ></input>
