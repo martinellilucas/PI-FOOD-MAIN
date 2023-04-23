@@ -23,8 +23,8 @@ const Landing = () => {
           page...
         </p>
       </div>
-      <Link className={style.button} to="/home">
-        <Button text="Enter"></Button>
+      <Link to="/home">
+        <Button display={true} text="Enter"></Button>
       </Link>
     </div>
   );

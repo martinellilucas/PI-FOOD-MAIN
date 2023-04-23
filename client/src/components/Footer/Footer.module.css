@@ -4,21 +4,14 @@
   justify-content: center;
   width: 100%;
   margin-top: 5px;
-}
-.text {
   color: white;
-  text-shadow: 3px 3px 8px white;
+  text-shadow: 3px 3px 8px black;
+  text-decoration: none;
 }
 .link {
-  color: whitesmoke;
   text-decoration: none;
-  text-shadow: 3px 3px 8px white;
+  color: white;
 }
-.link:visited {
-  color: whitesmoke;
-  text-shadow: 3px 3px 8px white;
-}
-
 @media screen and (max-width: 900px) {
   .text {
     font-size: 0.5em;

@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
+  color: white;
 }
 .title {
   text-align: left;
@@ -15,8 +16,7 @@
   margin-bottom: 150px;
   margin-left: 150px;
   font-size: 3.5em;
-  color: whitesmoke;
-  text-shadow: 4px 4px 8px #db363b;
+  text-shadow: 3px 3px 3px #db363b;
   text-decoration: overline;
 }
 .form {
@@ -29,6 +29,7 @@
   height: max-content;
   align-self: center;
   margin-bottom: 50px;
+  text-shadow: 2px 2px 3px black;
 }
 .input {
   font-size: 1.3em;
@@ -37,19 +38,41 @@
   margin: 20px;
   border: 0px;
   border-radius: 3px;
-  box-shadow: 3px 3px 8px #db363b;
+  box-shadow: 3px 3px 8px black;
+  transition: all 0.3s;
+}
+.input:hover {
+  transform: scale(1.05);
+  transition-delay: 0.3s;
 }
 .label {
   font-size: 1.5em;
-  color: whitesmoke;
+
   margin: 20px;
-  text-shadow: 3px 3px 8px #db363b;
 }
 .button {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
+.error {
+  font-size: 1.3em;
+  text-align: center;
+  width: 500px;
+  margin: 20px;
+  border: 0px;
+  border-radius: 3px;
+  color: white;
+  background-color: #db363b;
+  box-shadow: 3px 3px 8px black;
+}
+.msgError {
+  margin: 15px;
+  font-size: 1.3em;
+  color: black;
+  text-shadow: 2px 2px 3px white;
+}
+
 @media screen and (max-width: 900px) {
   .container {
     margin-top: 40px;

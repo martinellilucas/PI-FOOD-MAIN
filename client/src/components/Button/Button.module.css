@@ -1,22 +1,45 @@
 .button {
-  font-size: 1.5em;
-  color: whitesmoke;
+  font-size: 15px;
+  color: white;
   text-decoration: none;
   border-radius: 5px;
-  height: max-content;
-  width: max-content;
-  box-shadow: 3px 3px 8px #db363b;
-  border: 0px;
-  transition: 0.2s ease-in-out;
-  text-shadow: 3px 3px 8px white;
+  box-shadow: 3px 3px 8px black;
+  transition: all 0.3s;
+  text-shadow: 1px 1px 3px black;
   background: rgba(245, 97, 97, 0.7);
-  padding: 0.4em;
+  padding: 1.1em 2em;
   margin: 20px;
-  border: 1px solid whitesmoke;
+  border: 2px solid white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-weight: bolder;
+}
+.noButton {
+  display: none;
+}
+.button:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 120%;
+  background-color: #e98488;
+  top: 50%;
+  transform: skewX(30deg) translate(-150%, -50%);
+  transition: all 0.5s;
 }
 
 .button:hover {
-  transition-delay: 0.2s;
-  padding: 0.5em;
-  cursor: pointer;
+  background-color: white;
+  color: #db363b;
+  border: 2px solid #db363b;
+}
+
+.button:hover::before {
+  transform: skewX(30deg) translate(150%, -50%);
+  transition-delay: 0.1s;
+}
+
+.button:active {
+  transform: scale(0.9);
 }

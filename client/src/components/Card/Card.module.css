@@ -1,6 +1,9 @@
 .card {
+  text-decoration: none;
+  text-shadow: 3px 3px 8px black;
+  color: whitesmoke;
   padding: 1rem;
-  height: 25rem;
+  height: 60rem;
   margin: 20px;
   background: rgba(245, 97, 97, 0.7);
   border: 1px solid whitesmoke;
@@ -8,16 +11,25 @@
   box-shadow: 3px 3px 8px #db363b;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
+
 .title {
   font-size: 2em;
   text-decoration: underline;
-  text-align: center;
-  color: whitesmoke;
-  text-shadow: 3px 3px 8px #db363b;
+}
+.subTitle {
+  font-size: 1.8em;
+  text-decoration: underline;
 }
 .image {
   box-shadow: 3px 3px 8px white;
   border-radius: 15px;
+}
+
+.list {
+  font-size: 1.4em;
+  text-align: left;
 }

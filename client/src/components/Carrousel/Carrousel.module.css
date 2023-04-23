@@ -9,7 +9,7 @@
   flex-grow: 1;
   object-fit: cover;
   opacity: 0.8;
-  transition: 1.5s ease;
+  transition: 0.5s ease;
 }
 .image:hover {
   cursor: zoom-in;

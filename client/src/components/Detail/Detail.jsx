@@ -14,11 +14,11 @@ export const Detail = () => {
     return () => {
       dispatch(cleanDetail());
     };
-  }, [id]);
+  }, [id, dispatch]);
 
   return (
     <div className={style.detailView}>
-      <h1 className={style.detailTitle}>Recipe Detail ID: {recipeDetail.id}</h1>
+      <h1 className={style.detailTitle}>Recipe Detail: </h1>
       {recipeDetail.title ? (
         <div className={style.container}>
           <h1 className={style.title}>{recipeDetail.title}</h1>
@@ -47,8 +47,8 @@ export const Detail = () => {
             <hr className={style.separator}></hr>
             {recipeDetail.diets.map((element) => {
               return (
-                <li key={element} className={style.itemList}>
-                  {element.toUpperCase()}
+                <li key={element.id} className={style.itemList}>
+                  {element.name.toUpperCase()}
                 </li>
               );
             })}

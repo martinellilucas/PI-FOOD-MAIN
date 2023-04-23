@@ -1,27 +1,39 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import style from "./NavBar.module.css";
-import image from "../../assets/images/heathy eating.png";
+
 import SearchBar from "../SearchBar/SearchBar";
 
 const NavBar = () => {
   return (
     <div className={style.navBar}>
       <div className={style.searchContainer}>
-        <Link to="/home">
-          <img className={style.logo} alt="logo" src={image}></img>
-        </Link>
         <SearchBar />
       </div>
       <div className={style.menuContainer}>
-        <Link to="/home" className={style.menuText}>
+        <NavLink
+          to="/home"
+          className={({ isActive }) =>
+            isActive ? style.active : style.menuText
+          }
+        >
           Home
-        </Link>
-        <Link to="/form" className={style.menuText}>
+        </NavLink>
+        <NavLink
+          to="/form"
+          className={({ isActive }) =>
+            isActive ? style.active : style.menuText
+          }
+        >
           Form
-        </Link>
-        <Link to="/about" className={style.menuText}>
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive ? style.active : style.menuText
+          }
+        >
           About
-        </Link>
+        </NavLink>
       </div>
     </div>
   );

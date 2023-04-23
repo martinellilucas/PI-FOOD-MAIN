@@ -13,6 +13,27 @@
   background-size: contain;
   background-repeat: no-repeat;
   height: 120px;
+  text-shadow: 2px 2px 3px black;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.navBar:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 120%;
+  background-color: #e98488;
+  top: 50%;
+  transform: skewX(330deg) translate(-300%, -58%);
+  transition: all 0.5s;
+}
+.navBar:hover {
+  background-color: white;
+  color: #db363b;
+}
+.navBar:hover::before {
+  transform: skewX(330deg) translate(650%, -58%);
+  transition-delay: 0.1s;
 }
 .logo {
   height: 80%;
@@ -31,18 +52,28 @@
   display: flex;
   padding: 10px;
   text-decoration: none;
-  color: white;
   transition: 0.3s ease-in-out;
-  text-shadow: 3px 3px 5px white;
 }
 .menuText:hover {
-  font-size: 1.45em;
+  transform: scale(0.9);
   transition-delay: 0.3s;
 }
 .menuText:visited {
   color: white;
 }
+.active {
+  font-size: 1.5em;
+  display: flex;
+  padding: 10px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  transform: scale(1.2);
+  transition-delay: 0.3s;
+}
 
+.active:visited {
+  color: white;
+}
 .searchContainer {
   display: flex;
   flex-direction: row;
@@ -66,6 +97,11 @@
     margin-right: 70px;
   }
   .menuText {
+    font-size: 1em;
+    align-items: center;
+    padding: 5px;
+  }
+  .active {
     font-size: 1em;
     align-items: center;
     padding: 5px;

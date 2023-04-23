@@ -11,7 +11,7 @@
   text-align: left;
   margin-left: 150px;
   color: whitesmoke;
-  text-shadow: 3px 3px 8px #db363b;
+  text-shadow: 3px 3px 8px black;
   text-decoration: overline;
 }
 .loading {
@@ -19,7 +19,7 @@
   text-align: center;
   margin-top: 150px;
   color: whitesmoke;
-  text-shadow: 3px 3px 8px #db363b;
+  text-shadow: 3px 3px 8px black;
   text-decoration: overline;
 }
 .container {
@@ -42,13 +42,13 @@
   font-size: 2.5em;
   text-align: center;
   color: whitesmoke;
-  text-shadow: 3px 3px 8px #db363b;
+  text-shadow: 3px 3px 8px black;
 }
 .subTitle {
   font-size: 2.2em;
   text-align: center;
   color: whitesmoke;
-  text-shadow: 3px 3px 8px #db363b;
+  text-shadow: 3px 3px 8px black;
 }
 .image {
   height: 20%;
@@ -61,10 +61,12 @@
   text-align: center;
   color: whitesmoke;
   margin: 50px;
+  text-shadow: 3px 3px 8px black;
 }
 .diets {
   font-size: 1.2em;
   color: whitesmoke;
+  text-shadow: 3px 3px 8px black;
 }
 
 .separator {

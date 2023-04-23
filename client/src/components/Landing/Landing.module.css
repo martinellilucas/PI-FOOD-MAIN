@@ -1,6 +1,9 @@
 .container {
   display: flex;
   flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
   background-image: url("C:\Users\Lucas\Documents\Programación\PI-Food-main\client\src\assets\images\landingBG.jpg");
   background-repeat: no-repeat;
   background-position: left;
@@ -11,16 +14,16 @@
   padding-bottom: 30px;
 }
 .textContainer {
-  background: rgba(104, 0, 0, 0.3);
+  background: rgba(245, 97, 97, 0.7);
   width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 3%;
+  padding: 2rem;
 }
 .title {
   font-size: 5em;
   text-align: center;
   color: whitesmoke;
-  text-shadow: 3px 3px 8px darksalmon;
+  text-shadow: 3px 3px 3px black;
   text-decoration: overline;
 }
 .text {
@@ -28,16 +31,9 @@
   text-align: center;
   color: whitesmoke;
   margin: 50px;
-  text-shadow: 3px 3px 8px darksalmon;
+  text-shadow: 2px 2px 3px black;
 }
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  text-decoration: none;
-}
 .link:visited {
   color: white;
   text-decoration: none;

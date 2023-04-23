@@ -1,5 +1,5 @@
 const getRecipeById = require("../controllers/getRecipeById");
-const getRecipeByName = require("../controllers/getRecipeByName");
+const { getRecipeByName } = require("../controllers/getRecipeByName");
 const getRecipes = require("../controllers/getRecipes");
 const postRecipe = require("../controllers/postRecipe");
 
@@ -15,11 +15,12 @@ const handlerIdRecipe = async (req, res) => {
 
 const handlerPostRecipe = (req, res) => {
   try {
-    const { title, image, summary, score, instructions, diets } = req.body;
-    postRecipe({ title, image, summary, score, instructions, diets });
-    res
-      .status(200)
-      .json({ exito: { title, image, summary, score, instructions, diets } });
+    const { title, image, summary, healthScore, instructions, diets } =
+      req.body;
+    postRecipe({ title, image, summary, healthScore, instructions, diets });
+    res.status(200).json({
+      exito: { title, image, summary, healthScore, instructions, diets },
+    });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

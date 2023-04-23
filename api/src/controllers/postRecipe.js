@@ -1,11 +1,10 @@
-const axios = require("axios");
 const { Recipe } = require("../db");
 
 const postRecipe = async ({
   title,
   image,
   summary,
-  score,
+  healthScore,
   instructions,
   diets,
 }) => {
@@ -13,7 +12,7 @@ const postRecipe = async ({
     title,
     image,
     summary,
-    score,
+    healthScore,
     instructions,
   });
   await recipe.addDiet(diets);

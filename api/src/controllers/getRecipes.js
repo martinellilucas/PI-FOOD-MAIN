@@ -2,18 +2,28 @@ const axios = require("axios");
 require("dotenv").config();
 const { API_KEY, URL } = process.env;
 const { Recipe } = require("../db");
+const { getRecipeDiets } = require("./getRecipeByName");
 
 const getRecipes = async () => {
-  const recipes = await axios(
-    `${URL}/complexSearch?apiKey=c7be2639cddf46fb9e6f28f716a3fb56&number=100&instructionsRequired=true`
-  ).then(async ({ data }) => {
-    const recipesApi = await data.results.map((res) => {
-      return { ...res };
-    });
-    return recipesApi;
+  let recipesApi = await axios(
+    `${URL}/complexSearch?apiKey=ebd0b83e24be463aa793cc2cc5c91552&number=100&instructionsRequired=true&addRecipeInformation=true`
+  ).then(async (res) => {
+    let recipes = await res.data.results.map(
+      ({ vegetarian, id, title, healthScore, image, diets }) => {
+        return { vegetarian, id, title, healthScore, image, diets };
+      }
+    );
+    for (const recipe of recipes) {
+      recipe.diets = await getRecipeDiets(recipe.vegetarian, recipe.diets);
+    }
+    return recipes;
   });
-  const recipesDB = await Recipe.findAll();
-  return [...recipesDB, ...recipes];
+  let recipesDB = await Recipe.findAll();
+  for (const recipe of recipesDB) {
+    let diets = await recipe.getDiets({ raw: true });
+    recipe.dataValues = { ...recipe.dataValues, diets: [...diets] };
+  }
+  return [...recipesDB, ...recipesApi];
 };
 
 module.exports = getRecipes;
