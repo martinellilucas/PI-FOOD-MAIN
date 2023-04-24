@@ -8,11 +8,14 @@ export const validation = (form, errors, setErrors, target) => {
     if (!form.summary)
       setErrors({ ...errors, summary: "Empty summary is invalid" });
     if (form.summary.length > 200)
-      setErrors({ ...errors, summary: "Summary " });
-    else
       setErrors({
         ...errors,
         summary: "Summary can't contain more than 200 characters",
+      });
+    else
+      setErrors({
+        ...errors,
+        summary: "",
       });
   }
   if (target === "instructions") {

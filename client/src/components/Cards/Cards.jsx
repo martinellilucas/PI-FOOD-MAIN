@@ -8,7 +8,7 @@ const Cards = ({ recipes }) => {
           <Card
             key={id}
             id={id}
-            name={title}
+            title={title}
             image={image}
             diets={diets}
             healthScore={healthScore}

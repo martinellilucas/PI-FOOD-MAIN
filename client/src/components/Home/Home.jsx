@@ -15,7 +15,7 @@ const Home = () => {
   };
 
   const handleNext = () => {
-    if (firstRecipeInPage < recipes.length)
+    if (firstRecipeInPage < recipes.length - 9)
       setCurretPage(firstRecipeInPage + 9);
   };
   const handlePrevius = () => {
@@ -59,9 +59,13 @@ const Home = () => {
         <select className={style.menu} name="filter" onChange={handleFilter}>
           <option>All</option>
 
-          {diets.map((diet) => {
-            return <option key={diet.id}>{diet.name}</option>;
-          })}
+          {diets.length ? (
+            diets.map((diet) => {
+              return <option key={diet.id}>{diet.name}</option>;
+            })
+          ) : (
+            <></>
+          )}
           <option value="db">Data Base</option>
           <option value="api">Spoon API</option>
         </select>
