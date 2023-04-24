@@ -27,13 +27,15 @@
   text-decoration: overline;
 }
 .text {
-  font-size: 3em;
+  font-size: 2.5em;
   text-align: center;
   color: whitesmoke;
   margin: 50px;
   text-shadow: 2px 2px 3px black;
 }
-
+.link {
+  color: white;
+}
 .link:visited {
   color: white;
   text-decoration: none;
