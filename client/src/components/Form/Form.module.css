@@ -2,40 +2,51 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: max-content;
   margin-top: 140px;
   background-image: url("C:\Users\Lucas\Documents\Programación\PI-Food-main\client\src\assets\images\formBG.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   color: white;
+  padding-bottom: 100px;
 }
 .title {
-  text-align: left;
-  margin-top: 100px;
-  margin-bottom: 150px;
-  margin-left: 150px;
-  font-size: 3.5em;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 3em;
   text-shadow: 3px 3px 3px #db363b;
   text-decoration: overline;
 }
 .form {
   background: rgba(245, 97, 97, 0.7);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-gap: 1rem;
+  padding: 0.5em;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
   width: max-content;
   height: max-content;
-  align-self: center;
   margin-bottom: 50px;
   text-shadow: 2px 2px 3px black;
+  border-radius: 1em;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sectionDiets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .input {
   font-size: 1.3em;
   text-align: center;
-  width: 500px;
-  margin: 20px;
+  width: 450px;
+  margin: 10px;
   border: 0px;
   border-radius: 3px;
   box-shadow: 3px 3px 8px black;
@@ -47,8 +58,7 @@
 }
 .label {
   font-size: 1.5em;
-
-  margin: 20px;
+  margin: 10px;
 }
 .button {
   display: flex;
@@ -73,10 +83,19 @@
   text-shadow: 2px 2px 3px white;
 }
 
-@media screen and (max-width: 900px) {
+.checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 2400px) {
   .container {
-    margin-top: 40px;
-    padding-bottom: 130px;
+    padding-bottom: 310px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    padding-bottom: 120px;
   }
   .title {
     font-size: 3em;
@@ -85,8 +104,32 @@
     margin-bottom: 50px;
     text-align: center;
   }
+  .form {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
-.checkbox {
-  width: 20px;
-  height: 20px;
+@media screen and (max-width: 900px) {
+  .container {
+    margin-top: 40px;
+    padding-bottom: 150px;
+  }
+  .title {
+    font-size: 2em;
+    margin: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .label {
+    font-size: 1em;
+  }
+  .input {
+    width: 250px;
+  }
+  .checkbox {
+    width: 12px;
+  }
 }

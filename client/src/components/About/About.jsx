@@ -8,7 +8,7 @@ const About = () => {
       <h1 className={style.title}>About</h1>
       <div className={style.container}>
         <img src={image} alt="foto" className={style.image} />
-        Hi! My name is Lucas Martinelli, i'm a full-stack developer. This
+        {"  "}Hi! My name is Lucas Martinelli, i'm a full-stack developer. This
         proyect has been developed during the Henry's individual proyect
         instance. I present myself as a flexible and resilient person. I have
         the capacity for teamwork, problem solving, decision making, adaptation

@@ -11,25 +11,31 @@
   background-size: cover;
 }
 .container {
-  font-size: 3em;
+  font-size: 2.8em;
   text-align: center;
   color: whitesmoke;
-  margin: 50px;
+  margin-top: 0px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
   text-shadow: 2px 2px 3px black;
   text-align: left;
+  text-indent: 4%;
+  padding: 0.6em;
+  background: rgba(245, 97, 97, 0.6);
+  border-radius: 1em;
 }
 .image {
   border-radius: 15px;
-  width: 30%;
-  float: left;
+  width: 15%;
+  float: right;
   box-shadow: 3px 3px 3px black;
   border: 2px solid black;
-  margin: 50px;
+  margin: 20px;
 }
 .title {
-  margin-bottom: 50px;
   font-size: 5em;
-  color: whitesmoke;
+  color: white;
   text-shadow: 3px 3px 3px #db363b;
   text-decoration: overline;
 }
@@ -37,7 +43,7 @@
   font-size: 0.5em;
   text-decoration: none;
   margin: 20px;
-  transition: 0.2s ease-in-out;
+  transition: all 0.2s;
 }
 .link:hover {
   transform: scale(1.1);
@@ -50,15 +56,25 @@
   margin-left: 60%;
   width: fit-content;
 }
+@media screen and (max-width: 2400px) {
+  .view {
+    padding-bottom: 12%;
+  }
+}
 @media screen and (max-width: 900px) {
   .view {
     margin-top: 40px;
-    padding-bottom: 450px;
+    padding-bottom: 72%;
   }
   .title {
     font-size: 3em;
   }
   .container {
     font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .view {
+    padding-bottom: 65%;
   }
 }
