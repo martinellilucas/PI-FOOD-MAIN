@@ -19,7 +19,7 @@ const getRecipeDiets = async (vegetarian, diets) => {
 
 const getRecipeByName = async (name) => {
   let recipesApi = await axios(
-    `${URL}/complexSearch?query=${name}&apiKey=ebd0b83e24be463aa793cc2cc5c91552&addRecipeInformation=true`
+    `${URL}/complexSearch?query=${name}&apiKey=${API_KEY}&addRecipeInformation=true`
   ).then(async (res) => {
     let recipes = await res.data.results.map(
       ({ vegetarian, id, title, healthScore, image, diets }) => {

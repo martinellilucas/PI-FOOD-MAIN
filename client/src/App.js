@@ -7,6 +7,8 @@ import Home from "./components/Home/Home";
 import Footer from "./components/Footer/Footer";
 import { Detail } from "./components/Detail/Detail";
 import Error from "./components/Error/Error";
+import axios from "axios";
+axios.defaults.baseURL = "http://localhost:3001/";
 function App() {
   const { pathname } = useLocation();
   return (

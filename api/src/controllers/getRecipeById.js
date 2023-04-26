@@ -18,11 +18,11 @@ const getRecipeById = async (idreq) => {
       instructions,
       image,
       diets,
-    } = await axios(
-      `${URL}/${idreq}/information?apiKey=ebd0b83e24be463aa793cc2cc5c91552`
-    ).then((res) => {
-      return res.data;
-    });
+    } = await axios(`${URL}/${idreq}/information?apiKey=${API_KEY}`).then(
+      (res) => {
+        return res.data;
+      }
+    );
     let dietasDB = [];
     //basado en las dietas que posee la receta traida
     //creo una peticion a la base para que las dietas tengan el mismo formato
