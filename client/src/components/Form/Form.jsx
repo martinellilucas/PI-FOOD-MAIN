@@ -82,7 +82,7 @@ const Form = () => {
           </label>
           <input
             onChange={handleChange}
-            placeholder="Enter the title"
+            placeholder="📝"
             type="text"
             name="title"
             value={form.title}
@@ -99,7 +99,7 @@ const Form = () => {
           </label>
           <textarea
             onChange={handleChange}
-            placeholder="Enter the summary of the recipe"
+            placeholder="📝"
             type="text"
             name="summary"
             value={form.summary}
@@ -116,7 +116,7 @@ const Form = () => {
           </label>
           <input
             onChange={handleChange}
-            placeholder="Enter the health score of the recipe"
+            placeholder="📝"
             type="number"
             name="healthScore"
             value={form.healthScore}
@@ -133,7 +133,7 @@ const Form = () => {
           </label>
           <textarea
             onChange={handleChange}
-            placeholder="Enter the step by step of the recipe"
+            placeholder="📝"
             type="text"
             name="instructions"
             value={form.instructions}
@@ -150,7 +150,7 @@ const Form = () => {
           </label>
           <input
             onChange={handleChange}
-            placeholder="Enter the url of the image"
+            placeholder="📝"
             type="text"
             name="image"
             value={form.image}

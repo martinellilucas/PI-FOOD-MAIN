@@ -18,17 +18,20 @@
   text-decoration: overline;
 }
 .form {
-  background: rgba(245, 97, 97, 0.7);
+  background-image: url("C:\Users\Lucas\Documents\Programación\PI-Food-main\client\src\assets\images\formBG.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
   display: grid;
   grid-gap: 1rem;
-  padding: 0.5em;
+  padding: 3em;
   grid-template-columns: repeat(2, 1fr);
   margin: 0 auto;
   width: max-content;
   height: max-content;
   margin-bottom: 50px;
-  text-shadow: 2px 2px 3px black;
   border-radius: 1em;
+  box-shadow: 3px 3px 5px rgba(245, 97, 97, 0.7);
 }
 .section {
   display: flex;
@@ -39,17 +42,20 @@
 .sectionDiets {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 .input {
+  background: rgba(245, 97, 97, 0.7);
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  padding: 0.3em;
   font-size: 1.3em;
   text-align: center;
   width: 450px;
   margin: 10px;
-  border: 0px;
-  border-radius: 3px;
-  box-shadow: 3px 3px 8px black;
+  border: none;
+  box-shadow: 0px 1px 1px black;
   transition: all 0.3s;
 }
 .input:hover {
@@ -57,6 +63,9 @@
   transition-delay: 0.3s;
 }
 .label {
+  font-weight: bolder;
+  text-shadow: 2px 2px 3px white;
+  color: black;
   font-size: 1.5em;
   margin: 10px;
 }
@@ -77,10 +86,12 @@
   box-shadow: 3px 3px 8px black;
 }
 .msgError {
+  font-style: italic;
+  font-weight: lighter;
   margin: 15px;
   font-size: 1.3em;
-  color: black;
-  text-shadow: 2px 2px 3px white;
+  color: #db363b;
+  text-shadow: 1px 1px 1px black;
 }
 
 .checkbox {
@@ -122,6 +133,20 @@
   }
   .form {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .label {
+    font-size: 1em;
+  }
+  .input {
+    width: 250px;
+  }
+  .checkbox {
+    width: 12px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .form {
+    padding: 2px;
   }
   .label {
     font-size: 1em;
