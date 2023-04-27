@@ -191,6 +191,8 @@ const Form = () => {
           <Button
             text="Submit"
             display={
+              form.instructions &&
+              form.summary &&
               form.title &&
               !errors.title &&
               !errors.summary &&

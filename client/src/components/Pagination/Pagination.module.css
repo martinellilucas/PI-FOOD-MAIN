@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.noActive {
+  cursor: pointer;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px black;
+  text-shadow: 1px 1px 3px black;
+  background: rgba(245, 97, 97, 0.7);
+  padding: 0.5em;
+  margin: 2px;
+  border: 2px solid white;
+  transition: all 0.5s;
+}
+.isActive {
+  cursor: pointer;
+  text-align: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid white;
+  border-radius: 1px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 5px;
+  border: 2px solid black;
+  box-shadow: 3px 3px 8px black;
+  text-shadow: #e98488;
+}
+
+.noActive:hover {
+  transform: scale(1.1);
+  transition-delay: 0.5s;
+}

@@ -51,8 +51,14 @@ export const cleanDetail = () => {
 };
 
 export const searchRecipe = (name) => {
-  return async function (dispatch) {
-    const response = await axios.get(`/recipes/?name=${name}`);
-    dispatch({ type: SEARCH_RECIPE, payload: response.data });
-  };
+  if (name) {
+    return async function (dispatch) {
+      const response = await axios.get(`/recipes/?name=${name}`);
+      dispatch({ type: SEARCH_RECIPE, payload: response.data });
+    };
+  } else
+    return async function (dispatch) {
+      const response = await axios.get("/recipes");
+      dispatch({ type: GET_RECIPES, payload: response.data });
+    };
 };

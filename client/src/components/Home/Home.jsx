@@ -4,32 +4,30 @@ import Carrousel from "../Carrousel/Carrousel";
 import style from "./Home.module.css";
 import { filter, getDiets, getRecipes, order } from "../../redux/actions";
 import { useEffect, useState } from "react";
-import Button from "../Button/Button";
 
-const Home = () => {
+import Pagination from "../Pagination/Pagination";
+
+const Home = ({ currentPage, setCurrentPage }) => {
   const dispatch = useDispatch();
   const { recipes, diets } = useSelector((state) => state);
 
-  const pagination = () => {
-    return recipes.slice(firstRecipeInPage, firstRecipeInPage + 9);
-  };
+  const [recipesPerPage] = useState(9);
 
-  const handleNext = () => {
-    if (firstRecipeInPage < recipes.length - 9)
-      setCurretPage(firstRecipeInPage + 9);
-  };
-  const handlePrevius = () => {
-    if (firstRecipeInPage > 0) setCurretPage(firstRecipeInPage - 9);
-  };
+  const totalRecipes = recipes.length;
+  const lastIndex = currentPage * recipesPerPage;
+  const firstIndex = lastIndex - recipesPerPage;
+
   const handleOrder = (event) => {
     const judgment = event.target.value;
     dispatch(order(judgment));
+    setCurrentPage(1);
   };
   const handleFilter = (event) => {
     const judgment = event.target.value;
     dispatch(filter(judgment));
+    setCurrentPage(1);
   };
-  const [firstRecipeInPage, setCurretPage] = useState(0);
+
   useEffect(() => {
     dispatch(getDiets());
     dispatch(getRecipes());
@@ -69,12 +67,15 @@ const Home = () => {
           <option value="db">Data Base</option>
           <option value="api">Spoon API</option>
         </select>
-
-        <Button display={true} text="Previus" onClick={handlePrevius} />
-        <Button display={true} text="Next" onClick={handleNext} />
       </div>
+      <Pagination
+        recipesPerPage={recipesPerPage}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        totalRecipes={totalRecipes}
+      />
       {recipes.length ? (
-        <Cards recipes={pagination()}></Cards>
+        <Cards recipes={recipes.slice(firstIndex, lastIndex)}></Cards>
       ) : (
         <h1 className={style.loading}>Loading...</h1>
       )}

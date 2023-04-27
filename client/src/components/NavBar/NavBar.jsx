@@ -3,11 +3,11 @@ import style from "./NavBar.module.css";
 
 import SearchBar from "../SearchBar/SearchBar";
 
-const NavBar = () => {
+const NavBar = ({ currentPage, setCurrentPage }) => {
   return (
     <div className={style.navBar}>
       <div className={style.searchContainer}>
-        <SearchBar />
+        <SearchBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </div>
       <div className={style.menuContainer}>
         <NavLink

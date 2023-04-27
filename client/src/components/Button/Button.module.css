@@ -7,8 +7,8 @@
   transition: all 0.3s;
   text-shadow: 1px 1px 3px black;
   background: rgba(245, 97, 97, 0.7);
-  padding: 1.1em 2em;
-  margin: 20px;
+  padding: 1em 1em;
+  margin: 10px;
   border: 2px solid white;
   cursor: pointer;
   position: relative;
