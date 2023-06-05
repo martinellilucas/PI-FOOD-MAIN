@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 100%;
   margin-top: 140px;
-  background-image: url("C:\Users\Lucas\Documents\Programación\PI-Food-main\client\src\assets\images\formBG.jpg");
+  background-image: url("../../assets/images/formBG.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;

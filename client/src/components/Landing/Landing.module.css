@@ -4,7 +4,7 @@
 
   justify-content: center;
   align-items: center;
-  background-image: url("C:\Users\Lucas\Documents\Programación\PI-Food-main\client\src\assets\images\landingBG.jpg");
+  background-image: url("../../assets/images/landingBG.jpg");
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;

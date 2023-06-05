@@ -1,5 +1,5 @@
 .detailView {
-  background-image: url("C:\Users\Lucas\Documents\Programación\PI-Food-main\client\src\assets\images\detailBG.jpg");
+  background-image: url("../../assets/images/detailBG.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 140px;
